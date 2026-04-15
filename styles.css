@@ -849,14 +849,13 @@ p:last-child { margin-bottom: 0; }
    FLOATING WHATSAPP BUTTON
    ========================================================= */
 
-.whatsapp-float {
+.whatsapp-float,
+.facebook-float {
   position: fixed;
-  bottom: 24px;
   right: 24px;
   z-index: 200;
   width: 56px;
   height: 56px;
-  background: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -866,12 +865,28 @@ p:last-child { margin-bottom: 0; }
   text-decoration: none;
 }
 
+.whatsapp-float {
+  bottom: 24px;
+  background: #25d366;
+}
+
+.facebook-float {
+  bottom: 92px;
+  background: #1877f2;
+}
+
 .whatsapp-float:hover {
   background: #1ebe5a;
   transform: scale(1.08);
 }
 
-.whatsapp-float svg {
+.facebook-float:hover {
+  background: #0f65d4;
+  transform: scale(1.08);
+}
+
+.whatsapp-float svg,
+.facebook-float svg {
   width: 30px;
   height: 30px;
   fill: var(--white);
