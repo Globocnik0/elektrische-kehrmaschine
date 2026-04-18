@@ -846,6 +846,44 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* =========================================================
+   LANGUAGE SWITCHER
+   ========================================================= */
+
+.lang-switcher {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.lang-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 3px 7px;
+  border-radius: 4px;
+  transition: color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+
+.lang-link.active {
+  color: var(--blue);
+  background: var(--blue-light);
+}
+
+.lang-link:hover:not(.active) {
+  color: var(--dark);
+  background: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .lang-switcher {
+    display: none;
+  }
+}
+
+/* =========================================================
    FLOATING WHATSAPP BUTTON
    ========================================================= */
 
